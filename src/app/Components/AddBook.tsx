@@ -41,8 +41,8 @@ const AddBookModal: React.FC = () => {
         </button>
       </div>
       {isModalOpen && (
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
-          <div className="bg-white py-10 px-96 rounded-lg">
+        <div className="fixed inset-0  bg-gray-500 bg-opacity-75 flex items-center justify-center">
+          <div className="bg-white py-10 lg:px-44 sm:px-28  rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Add Book</h2>
 
             <label className=" mb-2">Name:</label>

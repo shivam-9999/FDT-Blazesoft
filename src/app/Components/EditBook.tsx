@@ -35,7 +35,7 @@ const EditBook: React.FC<EditBookProps> = ({ bookId, onClose }) => {
 
     return (
         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg">
+            <div className="bg-white py-10 lg:px-44 sm:px-28 rounded-lg">
                 <h2 className="text-2xl font-bold mb-4">Edit Book</h2>
 
                 <label className="block mb-2">Name:</label>
