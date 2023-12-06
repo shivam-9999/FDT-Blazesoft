@@ -36,7 +36,7 @@ const AddBookModal: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-between mb-4"> {/* Updated to use flex to align items */}
+    <div className="flex items-center  justify-between mb-4"> {/* Updated to use flex to align items */}
       <h1 className="text-2xl font-bold mb-4 mr-4">Book List</h1>
       <div className="flex justify-center mb-4">
         <button

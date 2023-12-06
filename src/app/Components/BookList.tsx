@@ -10,6 +10,8 @@ const BookList: React.FC = () => {
   const books = useSelector((state: RootState) => state.book.books);
   const [selectedBookId, setSelectedBookId] = useState<number | null>(null);
 
+
+
   const handleDelete = (bookId: number) => {
     dispatch(deleteBook(bookId));
   };
@@ -36,9 +38,9 @@ const BookList: React.FC = () => {
         </thead>
         <tbody>
           {books.map((book) => (
-            <tr key={book.id}>
+            <tr key={book.id} className='border-x-2 odd:bg-white even:bg-blue-50 border-y-neutral-800'>
               <td
-                className="border p-2 cursor-pointer text-blue-500 hover:underline"
+                className="border p-2 cursor-pointer  text-blue-500 hover:underline"
                 onClick={() => handleEdit(book.id)}
               >
                 {book.name}
