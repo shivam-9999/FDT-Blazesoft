@@ -25,10 +25,10 @@ const BookList: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto overflow-x-auto">
-      <table className="min-w-full border shadow-lg rounded-md overflow-hidden">
+    <div className="mx-auto overflow-x-auto ">
+      <table className="min-w-full border shadow-2xl text-sm rounded-md overflow-hidden">
         <thead>
-          <tr className="bg-blue-500 text-white">
+          <tr className="bg-blue-500 text-md text-white">
             <th className="border p-2">Name</th>
             <th className="border p-2">Price</th>
             <th className="border p-2">Category</th>

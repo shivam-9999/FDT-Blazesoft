@@ -48,8 +48,8 @@ const AddBookModal: React.FC = () => {
         </button>
       </div>
       {isModalOpen && (
-        <div className="fixed inset-0  bg-gray-500 bg-opacity-75 flex items-center justify-center">
-          <div className="bg-white py-10 lg:px-44 sm:px-28  rounded-lg">
+        <div className="fixed inset-0  bg-gray-500  bg-opacity-75 flex items-center justify-center">
+          <div className="bg-white py-10 text-md lg:px-44 sm:px-28  rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Add Book</h2>
 
             <label className=" mb-2">Name:</label>
@@ -58,7 +58,7 @@ const AddBookModal: React.FC = () => {
               value={book.name}
               onChange={(e) => setBook({ ...book, name: e.target.value })}
               className="border rounded  w-full mb-2 p-2"
-              required
+
             />
 
             <label className="block mb-2 d-flex justify-start">Price:</label>

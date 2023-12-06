@@ -22,7 +22,7 @@ const Home: React.FC = () => {
     <Provider store={store}>
       <div className="App h-screen bg-slate-100">
         <NavBar />
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto py-4">
           <AddBookModal />
           <BookList />
         </div>
