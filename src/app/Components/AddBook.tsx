@@ -25,7 +25,7 @@ const AddBookModal: React.FC = () => {
   const handleAddBook = () => {
 
     // Validate that required fields are not empty
-    if (book.name.trim() === "" || book.price === 0 || book.category.trim() === "" || book.description.trim() === "") {
+    if (book.name.trim() === "" || book.price === 0 || book.category.trim() === "" || isNaN(book.price) || book.description.trim() === "") {
       alert("Please fill every fields");
       return;
     }

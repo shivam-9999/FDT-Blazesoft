@@ -29,7 +29,7 @@ const EditBook: React.FC<EditBookProps> = ({ bookId, onClose }) => {
     }, [bookId, books]);
 
     const handleEditBook = () => {
-        if (editedBook.name.trim() === "" || editedBook.price === 0 || editedBook.category.trim() === "" || editedBook.description.trim() === "") {
+        if (editedBook.name.trim() === "" || editedBook.price === 0 || isNaN(editedBook.price) || editedBook.category.trim() === "" || editedBook.description.trim() === "") {
             alert("Please fill every fields");
             return;
         }
