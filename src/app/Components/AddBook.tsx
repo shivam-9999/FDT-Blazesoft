@@ -23,8 +23,15 @@ const AddBookModal: React.FC = () => {
   };
 
   const handleAddBook = () => {
+
+    // Validate that required fields are not empty
+    if (book.name.trim() === "" || book.price === 0 || book.category.trim() === "" || book.description.trim() === "") {
+      alert("Please fill every fields");
+      return;
+    }
+
     dispatch(addBook({ ...book, id: Date.now() }));
-    setBook({ name: "", price: 0, category: "", description: "" });
+    setBook({ ...book, name: "", price: 0, category: "", description: "" });
     closeModal();
   };
 
@@ -51,6 +58,7 @@ const AddBookModal: React.FC = () => {
               value={book.name}
               onChange={(e) => setBook({ ...book, name: e.target.value })}
               className="border rounded  w-full mb-2 p-2"
+              required
             />
 
             <label className="block mb-2 d-flex justify-start">Price:</label>
@@ -59,6 +67,7 @@ const AddBookModal: React.FC = () => {
               value={book.price}
               onChange={(e) => setBook({ ...book, price: parseFloat(e.target.value) })}
               className="border rounded w-full mb-2 p-2"
+              required
             />
 
             <label className="block mb-2">Category:</label>
@@ -67,6 +76,7 @@ const AddBookModal: React.FC = () => {
               value={book.category}
               onChange={(e) => setBook({ ...book, category: e.target.value })}
               className="border rounded w-full mb-2 p-2"
+              required
             />
 
             <label className="block mb-2">Description:</label>
@@ -74,6 +84,7 @@ const AddBookModal: React.FC = () => {
               value={book.description}
               onChange={(e) => setBook({ ...book, description: e.target.value })}
               className="border rounded w-full mb-2 p-2"
+              required
             />
 
             <div className="flex justify-end">
